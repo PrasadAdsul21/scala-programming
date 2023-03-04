@@ -1,0 +1,35 @@
+import scala.io.StdIn._
+import scala.util._
+
+object SingletonObject{
+     
+    var count:Int=0;
+    def countObject():Int={  
+          count+=1
+          return count
+    }  
+}  
+class Project(var id1:Int,var nam:String,var loc:String)
+{
+     var id:Int=id1
+     var name:String=nam
+     var location:String=loc
+     var cnt=SingletonObject.countObject()
+     println("Number of objects created="+cnt)
+
+      def display()
+      {
+           
+            println(" "+id+" "+name+" "+location)
+      }
+}
+object ProjectDemo
+{
+ def main(args:Array[String])
+    {
+     var ob1=new Project(1,"testing" ,"nagar")
+            ob1.display()  
+            var ob2=new Project(2,"xyz","xyz")
+            ob2.display()
+        }
+}
