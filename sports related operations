@@ -1,0 +1,52 @@
+import scala.io.StdIn._
+import scala.util._
+
+abstract class Sports
+{
+ var id:Int=0
+ var name:String=""
+ var description:String=""
+ var amount:Int=0
+ def display()
+
+}
+class Indoor(var id1:Int,var name1:String,var des:String,var amt:Int) extends Sports
+{ 
+         id=id1
+  name=name1
+  description=des
+  amount=amt
+       
+      def display()
+      {    
+            println(" "+id+" "+name+" "+description+" "+amount+" ")
+      }
+}
+class Outdoor(var id1:Int,var name1:String,var des:String,var amt:Int) extends Sports
+{
+       id=id1
+       name=name1
+       description=des
+       amount=amt
+ 
+      def display()
+      {
+           println(" "+id+" "+name+" "+description+" "+amount+" ")
+      }
+}
+object SportsDemo
+{
+ def main(args:Array[String])
+    {
+      var obj=new Indoor(1,"caram","xyz",200)
+       
+             println("Display details of Indoor games:")
+             obj.display()
+            
+
+             var ob=new Outdoor(2,"cricket","it contain 11 player",10000)
+          
+             println("Display details of outdoor games:")
+             ob.display()     
+        }
+}
