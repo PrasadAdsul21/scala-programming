@@ -1,0 +1,18 @@
+import scala.io.StdIn._
+object factDemo
+{
+def main (args:Array[String])
+{
+var n:Int=0
+var fact:Int=1
+
+println("Enter the no.")
+n=scala.io.StdIn.readInt();
+
+for(i<-1 to n)
+{
+fact=fact*i
+}
+println("Factorial is"+fact)
+}
+}
