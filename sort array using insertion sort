@@ -1,0 +1,46 @@
+import scala.io.StdIn._
+import scala.util._
+import Array._
+
+object SortInsertion
+{
+ def main(args:Array[String])
+    {
+                var arr=new Array[Int](30)
+                println("Enter the number of elements in the array to be entered:")
+                var n=scala.io.StdIn.readInt()
+                println("Enter the elements of array:")
+                
+  //accept array elemets
+          for(i<-0 until n)
+   {
+                 println("Enter the element="+(i+1))
+                 arr(i)=scala.io.StdIn.readInt()
+   }
+                
+  //print the array to be sorted
+                
+  println("print the array to be sorted")
+                for (i <- 0 until n) {
+                print(" "+arr(i))
+                }
+
+                //insertion sort 
+                for(i<-1 until n)
+                { 
+                  var key=arr(i)
+                  var j=i-1
+                  while(j>=0 && key<arr(j))
+                   { 
+                      arr(j+1)=arr(j)
+                       j=j-1
+                   }
+                  arr(j+1)=key
+                 }
+                //print the sorted array
+                   println()
+                   println("Sorted array:")
+                 for(i<-0 until n)
+                   print(" "+arr(i))
+           }
+}
