@@ -1,0 +1,21 @@
+import scala.io.StdIn._
+object Avg
+{
+    def main(args:Array[String])
+    {
+     var n1:Int=0;
+       var n2:Int=0;
+                    var count:Int=0;
+                    println("Enter the two numbers:");
+                    n1=readInt();
+                    n2=readInt();
+       var sum=0;
+                  for(i<-n1  to n2)
+       {
+        sum=sum+i;
+           count=count+1;
+        }
+                var avg=sum/count;
+                println("Average="+avg);
+   }
+}
