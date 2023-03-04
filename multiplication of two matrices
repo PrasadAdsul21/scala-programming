@@ -1,0 +1,55 @@
+import scala.io.StdIn._
+import scala.util._
+import Array._
+
+object MatrixMultiplication
+{
+ def main(args:Array[String])
+    {
+                var a=ofDim[Int](10,10)
+                var b=ofDim[Int](10,10)
+                var c=ofDim[Int](10,10)
+                println("Ensure that number of rows and columns of both the matrix should be same:")
+                println("Enter the number rows of matrix:")
+                var n=scala.io.StdIn.readInt()
+                println("Enter the elements of Matrix A:")
+  //accept array elemets
+          for(i<-0 until n)
+   {
+                  for(j<-0 until n)
+                  {
+                  a(i)(j)=scala.io.StdIn.readInt()
+                   }
+   }
+                println()
+                println("Enter the elements of Matrix B:")
+  //accept array elemets
+          for(i<-0 until n)
+   {
+                  for(j<-0 until n)
+                  {
+                  b(i)(j)=scala.io.StdIn.readInt()
+                  }
+   }
+                
+ 
+                for (i <- 0 until n ) {
+                   for(j<-0 until n)
+                   {
+                     c(i)(j)=0
+                     for(k<-0 until n)
+                     c(i)(j)=c(i)(j)+a(i)(k)*b(k)(j) 
+                   }
+                }
+
+                //print the matrix
+                 println("Matrix:") 
+                for(i<-0 until n)
+                { 
+                  for(j<-0 until n)
+                     {
+                      print(" "+c(i)(j))
+                      }
+                } 
+           }
+}
