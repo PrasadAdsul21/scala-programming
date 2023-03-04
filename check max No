@@ -1,0 +1,23 @@
+import  scala.io.StdIn._
+object  maxDemo
+{
+   def main(args:Array[String])
+   {
+      var arr:Array[Int]=new Array[Int](5);
+      for(i<-0 until 5)
+    {
+      arr(i)=readInt();
+    }
+    var max1=arr(0);
+     var max2=max1;
+    for(i<-1 until 5)
+  {
+   if(arr(i)>max1)
+   { 
+    max2=max1;
+    max1=arr(i);
+   }
+  }
+  println("second maximum="+max2);
+ }
+}
