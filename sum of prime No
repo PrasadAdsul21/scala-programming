@@ -1,0 +1,34 @@
+import scala.io.StdIn._
+class Prime
+{
+      
+      def checkPrime(x:Int):Int={
+           var sum=0;
+           for(i<-1 to x)
+           {
+                if(x%i==0)
+               {
+                  sum=sum+1;    
+               }
+           }
+           if(sum==2)
+              return x;
+           else
+              return 0;
+      }
+}
+object PrimeSum
+{
+   def main(args:Array[String])
+   {
+        // println("Sum of prime numbers between 1 and 100:");
+         var ob=new Prime();
+         var sum=0;
+         for(i<-1 to 100)
+         {
+               var ans=ob.checkPrime(i);
+               sum=sum+ans;
+         }
+          println("Sum of Prime Numbers between 1 and 100 is="+sum);    
+   }
+}
