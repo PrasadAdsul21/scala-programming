@@ -1,0 +1,66 @@
+import scala.io.StdIn._
+import scala.util._
+abstract class Order
+{
+var id:Int=0
+var description:String=""
+def accept()
+def display()
+}
+class PurchaseOrder extends Order
+{
+     var customer:String=""
+
+     def accept()
+     {
+          println("Enter the Order id:")
+          id=scala.io.StdIn.readInt()
+          println("Enter the Order Description:")
+           description=scala.io.StdIn.readLine()
+           println("Enter the Customer Name:")
+           customer=scala.io.StdIn.readLine()
+     }
+ 
+      def display()
+      {
+           
+            println(" "+id+" "+description+" "+customer+" ")
+      }
+}
+class SalesOrder extends Order
+{
+     var vendor:String=""
+
+     def accept()
+     {
+          println("Enter the Order id:")
+          id=scala.io.StdIn.readInt()
+          println("Enter the Order Description:")
+           description=scala.io.StdIn.readLine()
+           println("Enter the Customer Name:")
+           vendor=scala.io.StdIn.readLine()
+     }
+ 
+      def display()
+      {
+           
+            println(" "+id+" "+description+" "+vendor+" ")
+      }
+}
+object OrderDemo
+{
+ def main(args:Array[String])
+    {
+      var obj=new PurchaseOrder()
+             println("Accept purchase order details:")
+             obj.accept()
+             println("Display purchase order details:")
+             obj.display()
+             println()
+             var ob=new SalesOrder()
+             println("Accept SalesOrder detais:")
+             ob.accept()
+             println("Display SalesOrder details:")
+             ob.display()     
+        }
+}
