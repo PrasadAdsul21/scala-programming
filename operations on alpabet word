@@ -1,0 +1,34 @@
+import scala.io.StdIn._
+import scala.util._
+import Array._
+
+object CountUppercaseLetter
+{
+ def main(args:Array[String])
+    {
+                var len=0;
+                println("\nEnter the new string:")
+                var str=scala.io.StdIn.readLine()
+             
+                var arr:Array[Char]=str.toCharArray()
+println("\nDisplay the character array:")
+
+          for(i<-0 until arr.length)
+   {
+                 print(" "+arr(i))
+   }
+             
+                for(i<-0 until arr.length)
+                {
+                    if(arr(i)>='A' && arr(i)<='Z')
+                    {
+                       len=len+1
+                    }
+                }
+  println("\nNumber of Uppercase Character="+len)
+
+                var str1=str.toLowerCase()
+             
+                println("\nConverted Lowercase String is="+str1)
+         }
+}
