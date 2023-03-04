@@ -1,0 +1,35 @@
+import scala.io.StdIn._
+import scala.util._
+import Array._
+
+object ReadCharCount
+{
+ def main(args:Array[String])
+    {
+                var len=0;
+                println("\nEnter the new character:")
+                var ch=scala.io.StdIn.readChar()
+
+                println("\nEnter the new string:")
+                var str=scala.io.StdIn.readLine()
+                
+  //convert the string to character array.
+                var arr:Array[Char]=str.toCharArray()
+                
+                println("\nDisplay the character array:")
+
+          for(i<-0 until arr.length)
+   {
+                 print(" "+arr(i))
+   }
+               
+                for(i<-0 until arr.length)
+                {
+                    if(arr(i)==ch)
+                    {
+                       len=len+1
+                    }
+                } 
+  println("\nNumber of occerrences of  '"+ch+"'  character in the String= '"+str+"' is="+len)
+         }
+}
