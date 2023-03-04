@@ -1,0 +1,61 @@
+import scala.io.StdIn._
+import scala.util._
+
+abstract class Shape
+{
+ def volume()
+ def display()
+}
+class Cube extends Shape
+{
+     var vol:Float=0;
+
+     def volume()
+     {
+          println("Enter the length breadth and height of cube:")
+          var len=scala.io.StdIn.readFloat()
+           var bre=scala.io.StdIn.readFloat()
+           var height=scala.io.StdIn.readFloat()
+           vol=len*bre*height
+         
+     }
+ 
+      def display()
+      {
+           
+            println("volume of Cube="+vol)
+      }
+}
+class Cylinder extends Shape
+{
+     var vol=0.0
+
+     def volume()
+     {
+          println("Enter the radius of cylinder :")
+          var r=scala.io.StdIn.readFloat()
+          println("Enter the height of cylinder:")
+           var h=scala.io.StdIn.readFloat()
+           vol=(3.142)*r*r*h
+     }
+ 
+      def display()
+      {
+           
+            println("volume of cylinder="+vol)
+      }
+}
+object ShapeDemo
+{
+ def main(args:Array[String])
+    {
+      var obj=new Cube()
+             obj.volume()
+             obj.display()
+             println()
+
+             var ob=new Cylinder()
+             ob.volume()
+             ob.display()     
+        }
+}
